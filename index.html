@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Random Password Generator</title>
+	</head>
+	<body>
+		<main>
+			<section class="gen">
+				<h1 class="name">Password Generator</h1>
+				<section class="display">
+					<input
+						class="password-disp"
+						type="text"
+						readonly
+						value=""
+						maxlength="20"
+					/>
+					<div class="copy-button">
+						<img class="copy" src="./file-copy-line.svg" alt="" />
+						<img class="copied" src="./check-line.svg" alt="" />
+					</div>
+				</section>
+				<p class="char-text">
+					Character Length <span class="char-length"></span>
+				</p>
+				<section class="control">
+					<div class="selection">
+						<input
+							type="range"
+							min="8"
+							max="20"
+							value="8"
+							class="range-input"
+						/>
+
+						<label
+							><input
+								type="checkbox"
+								class="check-box uppercase"
+								checked
+							/>Include Uppercase</label
+						>
+						<label
+							><input
+								type="checkbox"
+								class="check-box lowercase"
+								checked
+							/>Include Lowercase</label
+						>
+						<label
+							><input type="checkbox" class="check-box numbers" />Include
+							Numbers</label
+						>
+						<label
+							><input type="checkbox" class="check-box symbols" />Include
+							Symbols</label
+						>
+					</div>
+					<div class="strength-con">
+						<p class="strength">Strong</p>
+						<div class="strength-color">
+							<div class="color"></div>
+							<div class="color"></div>
+							<div class="color"></div>
+							<div class="color"></div>
+						</div>
+					</div>
+					<button class="btn">Generate</button>
+				</section>
+			</section>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
