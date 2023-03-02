@@ -67,7 +67,7 @@ const lowerCase = [
 	"z",
 ];
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const myNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 const symbols = [
 	"!",
@@ -133,11 +133,14 @@ checkList.forEach((i) => {
 	i.addEventListener("click", () => {
 		if (i.classList.contains("numbers")) {
 			if (i.checked === true) {
-				everything.push(...numbers);
-				console.log(everything.indexOf(...numbers));
+				everything.push(...myNumbers);
+				console.log(everything.indexOf(...myNumbers));
 				hasNumbers = true;
 			} else {
-				everything.splice(everything.indexOf(...numbers), numbers.length);
+				if (everything.length === 10) {
+					everything.splice(0, 10);
+				}
+				everything.splice(everything.indexOf(...myNumbers), myNumbers.length);
 				hasNumbers = false;
 			}
 		} else if (i.classList.contains("symbols")) {
