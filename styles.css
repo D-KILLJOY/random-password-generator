@@ -18,17 +18,15 @@ body {
 :root {
 	font-size: 62.5%;
 
-	--background: #2a4e2ad3;
-	--background-two: #292846d3;
-	--background-three: #554377d3;
+	--background: #fff;
 	--lime: #59d47e;
 	--lime-l: #9becb3;
 	--orange: #d49f59;
-	--smoke: #d3cabe;
 }
 
 main {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -37,10 +35,12 @@ main {
 }
 
 .gen {
-	width: 33rem;
+	width: 90%;
+	max-width: 40rem;
 	padding: 2rem 1.5rem;
-	background-color: var(--background-two);
+	background-color: var(--background);
 	border-radius: 2rem;
+	border: 2px solid #000;
 }
 
 .name {
@@ -64,9 +64,9 @@ main {
 	outline: none;
 	border-radius: 1rem;
 	height: 100%;
-	background-color: #5a5651;
+	background-color: var(--background);
+	border: 2px solid #000;
 	padding: 2rem;
-	color: var(--smoke);
 	font-size: 1.6rem;
 	letter-spacing: 0.2rem;
 	font-weight: 900;
@@ -108,7 +108,7 @@ main {
 .copy-button::before {
 	content: "";
 	position: absolute;
-	border: 1.5rem solid #fff;
+	border: 1.5rem solid #000;
 	border-left-color: transparent;
 	border-bottom-color: transparent;
 	border-right-color: transparent;
@@ -129,11 +129,13 @@ main {
 .copy-button:hover::after {
 	content: "Copy";
 	color: #000;
+	border: 2px solid #000;
 }
 
 .show.copy-button::after {
 	content: "Copied";
-	color: var(--orange);
+	color: var(--lime);
+	border: 2px solid #000;
 }
 
 .copy {
@@ -145,7 +147,7 @@ main {
 }
 
 .control {
-	background-color: var(--background-three);
+	background-color: var(--background);
 	padding: 1rem;
 	margin: 2rem auto;
 	border-radius: 1rem;
@@ -165,6 +167,7 @@ main {
 	width: 100%;
 	margin: 1rem auto 2rem;
 	display: block;
+	accent-color: #000;
 }
 
 .selection {
@@ -196,7 +199,6 @@ label input {
 	font-weight: 900;
 	margin: 1rem auto;
 	font-size: 2rem;
-	color: var(--lime);
 }
 
 .strength-color {
@@ -204,6 +206,7 @@ label input {
 	justify-content: space-evenly;
 	margin: 0 0 2rem 0;
 }
+
 .color {
 	width: 22%;
 	height: 0.2rem;
@@ -212,17 +215,34 @@ label input {
 
 .btn {
 	width: 100%;
-	height: 4rem;
-	border-radius: 0.4rem;
+	height: 5rem;
+	border-radius: 1rem;
 	border: none;
 	font-size: 2rem;
 	font-weight: 900;
 	letter-spacing: 0.2rem;
-	color: #fff;
-	background-color: var(--orange);
+	background-color: #fff;
+	color: #000;
 	cursor: pointer;
+	border: 2px solid #000;
+	margin-top: 3rem;
+}
+
+input[type="checkbox"] {
+	accent-color: #000;
 }
 
 .btn:hover {
-	background-color: var(--lime);
+	background-color: #000;
+	color: #fff;
+}
+
+.link {
+	margin: 2rem auto;
+	font-size: 2rem;
+}
+
+.link a {
+	color: var(--orange);
+	text-decoration: none;
 }
